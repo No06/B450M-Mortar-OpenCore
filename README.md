@@ -6,7 +6,8 @@
 This EFI is made for B450M MORTAR, can not guarantee compatibility with other motherboards.
 
 # 更新 | Update
-2020.10.29
+
+# 2020.10.29
 
 ✅Opencore 更新至 0.6.2(Opencore update 0.6.2)
 
