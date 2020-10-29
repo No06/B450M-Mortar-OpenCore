@@ -5,6 +5,7 @@ This EFI is made by most EFI modifications and synthesis. The USB, sound, networ
 
 # 更新 | Update
 2020.10.29
+
 ✅Kext更新(kext update)
 
 ✅Opencore 更新至 0.6.2(Opencore update 0.6.2)
