@@ -1,14 +1,18 @@
 # 关于 | About
-此EFI是由多数EFI修改合成制作的，USB、声卡、网卡、显卡均正常，像WIFI和蓝牙这类的无测试，按理说支持任何版本的Catalina
+此EFI专门用于主板B450M MORTAR(MAX)定制
 
-This EFI is made by most EFI modifications and synthesis. The USB, sound, network and graphics card are all normal. There is no test like WIFI and Bluetooth. It stands to reason that it supports any version of Catalina.
+无法保证其他主板的兼容性
+
+This EFI is made for B450M MORTAR, can not guarantee compatibility with other motherboards.
 
 # 更新 | Update
 2020.10.29
 
+✅Opencore 更新至 0.6.2(Opencore update 0.6.2)
+
 ✅Kext更新(kext update)
 
-✅Opencore 更新至 0.6.2(Opencore update 0.6.2)
+✅自带主题(Opencore theme)
 
 ✅系统引导启动速度更快(Faster boot speed)
 
