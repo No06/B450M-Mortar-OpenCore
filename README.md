@@ -14,4 +14,4 @@ This EFI is made by most EFI modifications and synthesis. The USB, sound, networ
 
 ✅显卡、USB、网卡、声卡正常(USB, sound, network, graphics card are normal)
 
-❌睡眠无法唤醒(cannot wake up from sleep)
+❌睡眠无法唤醒(Cannot wake up from sleep)
