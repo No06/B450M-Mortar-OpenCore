@@ -12,7 +12,7 @@ Update of this item has been suspended
 关于 Opencore 0.7.2 更新使用注意事项
 =
 - 默认config为物理核心数为6的AMD CPU使用
-- 如果你是 `4核` 或者 `8核` 以上的请使用对应的config，如 `4核` 使用config4c.plist, `8核` 使用config8c.plist
+- 如果你是 `4核` 或者 `8核` 及以上的请使用对应的config，如 `4核` 使用config4c.plist, `8核` 使用config8c.plist
 
 **>>>>>>如果你没有自行配置的需求，以下内容可跳过不看<<<<<<**
 
