@@ -5,9 +5,9 @@
 
 此项目已暂停更新
 
-This EFI is made for B450M MORTAR(MAX), can not guarantee compatibility with other motherboards and not fully functional.
+This EFI is made for B450M MORTAR(MAX), can not guarantee support with other motherboards.
 
-Update of this item has been suspended
+This project has been stop update.
 
 关于 Opencore 0.7.2 更新使用注意事项
 =
