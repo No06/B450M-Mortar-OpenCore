@@ -3,38 +3,53 @@
 
 无法保证其他主板的兼容性
 
-此项目已暂停更新
-
 This EFI is made for B450M MORTAR(MAX), can not guarantee support with other motherboards.
 
-This project has been stop update.
+# ⚠️⚠️⚠️此 EFI 使用注意事项，不看90%扑街⚠️⚠️⚠️
 
-关于 Opencore 0.7.2 更新使用注意事项
-=
-- 默认config为物理核心数为6的AMD CPU使用
-- 如果你是 `4核` 或者 `8核` 及以上的请使用对应的config，如 `4核` 使用config4c.plist, `8核` 使用config8c.plist
-
-**>>>>>>如果你没有自行配置的需求，以下内容可跳过不看<<<<<<**
-
-内核测试补丁更新至macOS 12 Monterey beta版本
-
-对配置文件有配置要求，如下
-
+**1.** 默认config为物理核心数为 `6核` 的AMD CPU使用，如果你是 `4核` 或者 `8核` 及以上的请自行修改，不然无法启动
+- 首先，使用任意文本编辑器使用查找功能查找关键词 `Force cpuid_cores_per_package`，一共三个，紧接着找到对应它的键值 `Replace`，将其更改成如下表格
+- 
 | 核心数 | 数值|
-|--------|---------|
-|   4 Core  | `04` |
-|   6 Core  | `06` |
-|   8 Core  | `08` |
-|   12 Core | `0C` |
-|   16 Core | `10` |
-|   24 Core | `18` |
-|   32 Core | `20` |
+|-|-|
+|   4 Core  | `uAQAAAAA` `ugQAAAAA` `ugQAAACQ` |
+|   6 Core  | `uAYAAAAA` `ugYAAAAA` `ugYAAACQ` (默认)|
+|   8 Core  | `uAgAAAAA` `uggAAAAA` `uggAAACQ` |
+|   12 Core | `uAwAAAAA` `ugwAAAAA` `ugwAAACQ` |
+|   16 Core | `uBAAAAAA` `uhAAAAAA` `uhAAAACQ` |
 
-用OpenCore Configurator打开config, 找到 Kernel -> Patch 前三项名为 `algrey - Force cpuid_cores_per_package` 的补丁，只需修改`Replace`的值
+- 举个栗子，我的CPU是5900x，12个物理核心，那么原本的config.plist中 `uAYAAAAA` `ugYAAAAA` `ugYAAACQ` 分别替换为 `uAwAAAAA` `ugwAAAAA` `ugwAAACQ`
 
-修改默认的 `B8000000 0000`/`BA000000 0000`/`BA000000 0090`* 为 `B8 <核心数> 0000 0000`/`BA <核心数> 0000 0000`/`BA <核心数> 0000 0090`* , 其中 `<核心数>` 代表的对应数值在上面的表格
+**2.** 关于 Resizeble BAR 的开启
+- 如果你在 BIOS 中开启了 Resizeble BAR，那么你应当调整此项内容，否则无法启动！
+- 配置文件默认关闭，所需要调整的键值为 `Booter` -> `Quirks` -> `ResizeAppleGpuBars`
+- 和 Windows/Linux 不同，macOS 并不完全支持此功能，其最大限制值是 1GB，对应数值如下表：
+- 
+|输入|对应值|
+|-|-|
+-1（默认）|关闭
+0|1 MB
+1|2 MB
+2|4 MB
+3|8 MB
+4|16 MB
+5|32 MB
+6|64 MB
+7|128 MB
+8|256 MB
+9|512 MB
+10|1 GB
 
-举个例子 6核 的 5600X 需要修改替换的值即 `B8 06 0000 0000`/`BA 06 0000 0000`/`BA 06 0000 0090`
+- ResizeAppleGpuBars 建议值如下：
+> -1：关闭
+> 
+>0：1MB（保险值）
+>
+>8：256MB（传统值）
+>
+>10：1GB（macOS 支持最大值）
+- 可优先尝试 `10`，这么设置的目的是尝试使用 macOS 最大值看看能不能一定程度提升性能；如果遇到休眠问题（表现类似睡了即醒），则修改为 `8`；如果问题依旧，可改成 `0` 
 
+# 亮机截图
 ![](https://github.com/TheStupidNoob/B450M-MORTAR-OpencoreEFI/blob/main/test.png)
 ![](https://github.com/tekteq/opencanopy-minimal-theme/blob/main/Preview.png)
