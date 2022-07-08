@@ -51,5 +51,5 @@ This EFI is made for B450M MORTAR(MAX), can not guarantee support with other mot
 - 可优先尝试 `10`，这么设置的目的是尝试使用 macOS 最大值看看能不能一定程度提升性能；如果遇到休眠问题（表现类似睡了即醒），则修改为 `8`；如果问题依旧，可改成 `0` 
 
 # 亮机截图
-![](https://github.com/TheStupidNoob/B450M-MORTAR-OpencoreEFI/blob/main/test.png)
+![](https://github.com/TheStupidNoob/B450M-MORTAR-OpencoreEFI/blob/main/preview.png)
 ![](https://github.com/tekteq/opencanopy-minimal-theme/blob/main/Preview.png)
