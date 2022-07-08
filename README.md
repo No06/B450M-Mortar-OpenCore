@@ -16,7 +16,7 @@ This EFI is made for B450M MORTAR(MAX), can not guarantee support with other mot
 |   12 Core | `uAwAAAAA` `ugwAAAAA` `ugwAAACQ` |
 |   16 Core | `uBAAAAAA` `uhAAAAAA` `uhAAAACQ` |
 
-- 举个栗子，我的CPU是5900x，12个物理核心，那么原本的config.plist中 `uAYAAAAA` `ugYAAAAA` `ugYAAACQ` 分别替换为 `uAwAAAAA` `ugwAAAAA` `ugwAAACQ`
+- 举个栗子，我的CPU是5900x，12个物理核心，那么原本的config.plist中 `uAYAAAAA` `ugYAAAAA` `ugYAAACQ` 分别替换为 `uAwAAAAA` `ugwAAAAA` `ugwAAACQ`，所以如果你实在看不懂config文本格式，可以直接使用查找替换这些值
 
 **2.** 关于 Resizeble BAR 的开启
 - 如果你在 BIOS 中开启了 Resizeble BAR，那么你应当调整此项内容，否则无法启动！
