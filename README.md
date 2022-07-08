@@ -1,7 +1,5 @@
 # 关于 | About
-此EFI专门用于主板B450M MORTAR(MAX)定制
-
-无法保证其他主板的兼容性
+此EFI专门用于主板B450M MORTAR(MAX)定制，无法保证其他主板的兼容性
 
 This EFI is made for B450M MORTAR(MAX), can not guarantee support with other motherboards.
 
@@ -40,14 +38,11 @@ This EFI is made for B450M MORTAR(MAX), can not guarantee support with other mot
 9|512 MB
 10|1 GB
 
-- ResizeAppleGpuBars 建议值如下：
-> -1：关闭
-> 
->0：1MB（保险值）
->
->8：256MB（传统值）
->
->10：1GB（macOS 支持最大值）
+* ResizeAppleGpuBars 建议值如下：
+  * -1：关闭
+  * 0：1MB（保险值）
+  * 8：256MB（传统值）
+  * 10：1GB（macOS 支持最大值）
 - 可优先尝试 `10`，这么设置的目的是尝试使用 macOS 最大值看看能不能一定程度提升性能；如果遇到休眠问题（表现类似睡了即醒），则修改为 `8`；如果问题依旧，可改成 `0` 
 
 # 亮机截图
