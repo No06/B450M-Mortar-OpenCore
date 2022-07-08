@@ -5,7 +5,7 @@ This EFI is made for B450M MORTAR(MAX), can not guarantee support with other mot
 
 # ⚠️⚠️⚠️此 EFI 使用注意事项，不看90%扑街⚠️⚠️⚠️
 
-**1.** 默认config为物理核心数为 `6核` 的AMD CPU使用，如果你是 `4核` 或者 `8核` 及以上的请自行修改，不然无法启动
+### **1.** 默认config为物理核心数为 `6核` 的AMD CPU使用，如果你是 `4核` 或者 `8核` 及以上的请自行修改，不然无法启动
 - 首先，使用任意文本编辑器使用查找功能查找关键词 `Force cpuid_cores_per_package`，一共三个，紧接着找到对应它的键值 `Replace`，将其更改成如下表格
 - 
 | 核心数 | 数值|
@@ -18,7 +18,7 @@ This EFI is made for B450M MORTAR(MAX), can not guarantee support with other mot
 
 - 举个栗子，我的CPU是5900x，12个物理核心，那么原本的config.plist中 `uAYAAAAA` `ugYAAAAA` `ugYAAACQ` 分别替换为 `uAwAAAAA` `ugwAAAAA` `ugwAAACQ`，所以如果你实在看不懂config文本格式，可以直接使用查找替换这些值
 
-**2.** 关于 Resizeble BAR 的开启
+### **2.** 关于 Resizeble BAR 的开启
 - 如果你在 BIOS 中开启了 Resizeble BAR，那么你应当调整此项内容，否则无法启动！
 - 配置文件默认关闭，所需要调整的键值为 `Booter` -> `Quirks` -> `ResizeAppleGpuBars`
 - 和 Windows/Linux 不同，macOS 并不完全支持此功能，其最大限制值是 1GB，对应数值如下表：
