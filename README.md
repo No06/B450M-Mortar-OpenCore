@@ -49,5 +49,5 @@ This EFI is made for B450M MORTAR(MAX), can not guarantee support with other mot
 - 默认关闭macOS的SIP，这将导致无法直接进入Recovery模式，如有需要自行删除配置文件里的值 `NVRAM` -> `Add` -> `7C436110-AB2A-4BBB-A880-FE41995C9F82` -> `csr-active-config`
 
 # 亮机截图
-![](https://github.com/TheStupidNoob/B450M-MORTAR-OpencoreEFI/blob/main/preview.png)
+![](https://github.com/TheStupidNoob/B450M-MORTAR-OpencoreEFI/blob/main/preview13.png)
 ![](https://github.com/tekteq/opencanopy-minimal-theme/blob/main/Preview.png)
